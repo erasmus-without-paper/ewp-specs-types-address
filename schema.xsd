@@ -5,15 +5,15 @@
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     elementFormDefault="qualified"
 
-    targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-datatypes-address/tree/master"
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-datatypes-address/tree/master"
+    targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-types-address/tree/master"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-types-address/tree/master"
 >
     <!-- WRTODO: Replace all occurrences of 'master' (in all projects) with 'stable-v1' upon release. -->
 
     <xs:import
-        schemaLocation="https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd"
+        schemaLocation="../ewp-specs-architecture/common-types.xsd"
         namespace="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    />
+    /> <!-- WRTODO: absolute paths! -->
 
     <xs:annotation>
         <xs:documentation>
@@ -194,7 +194,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="country" minOccurs="0" maxOccurs="1" type="CountryCode">
+            <xs:element name="country" minOccurs="0" maxOccurs="1" type="ewp:CountryCode">
                 <xs:annotation>
                     <xs:documentation>
                         Country identifier.
@@ -204,20 +204,6 @@
 
         </xs:sequence>
     </xs:complexType>
-
-    <!-- WRTODO: Move this to ewp: namespace. -->
-    <xs:simpleType name="CountryCode">
-        <xs:annotation>
-            <xs:documentation>
-                ISO 3166-1 alpha-2 country code. These codes always have exactly 2 *upper-case*
-                letters (this differentiates them from *language* ISO codes, which are
-                lower-case.)
-            </xs:documentation>
-        </xs:annotation>
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[A-Z][A-Z]"/>
-        </xs:restriction>
-    </xs:simpleType>
 
     <xs:element name="street-address" type="FlexibleAddress">
         <xs:annotation>

@@ -10,7 +10,8 @@ Summary
 
 This repository contains XML Schemas used in EWP APIs for street and postal
 addressing. It follows the same [versioning rules][compat-rules] as all EWP
-APIs do.
+APIs do. Other projects are welcome to reuse this schema, along with its
+namespace. We are also open to suggestions of extending it.
 
 
 Address Types
