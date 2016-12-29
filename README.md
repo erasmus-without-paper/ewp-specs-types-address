@@ -96,7 +96,7 @@ Two ways of expressing a single address:
 </mailing-address>
 ```
 
-A valid mailing address, but *not* a valid street address:
+Valid mailing address, but *not* a valid street address:
 
 ```xml
 <mailing-address>
@@ -107,12 +107,36 @@ A valid mailing address, but *not* a valid street address:
 </mailing-address>
 ```
 
-A (somewhat) valid street address, but probably *not* a valid mailing address:
+Somewhat valid street address, but probably *not* a valid mailing address:
 
 ```xml
 <street-address>
     <addressLine>University of Oslo</addressLine>
     <locality>Oslo</locality>
+    <country>NO</country>
+</street-address>
+```
+
+Missing `<locality>` or `<country>` should be a very rare case, but it is not
+strictly forbidden. Many clients won't recognize it as a valid address, but if
+you cannot provide it in a more structured form, then it's still better than
+nothing (see [this issue]
+(https://github.com/erasmus-without-paper/ewp-specs-types-address/issues/2)):
+
+```xml
+<mailing-address>
+    <addressLine>Casmir Palace, Krakowskie Przedmieście 26/28, 00-927 Warszawa, POLAND</addressLine>
+</mailing-address>
+```
+
+An extremely limited address - with only a country (and possibly a city)
+present. Many clients won't recognize it as a valid address, but others might
+use even *that* limited information. It seems better to provide it this way,
+rather than providing nothing (e.g. see [this issue]
+(https://github.com/erasmus-without-paper/ewp-specs-api-ounits/issues/2#issuecomment-266775582)):
+
+```xml
+<street-address>
     <country>NO</country>
 </street-address>
 ```
