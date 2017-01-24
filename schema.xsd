@@ -38,8 +38,17 @@
             <xs:element name="recipientName" minOccurs="0" maxOccurs="unbounded" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>
-                        The name of the addressed entity (usually a person), formatted in a way
-                        suitable to be printed on an envelope.
+                        The name of the addressed entity (usually a person). In case of postal
+                        addresses, this name MAY be formatted in some custom way (preferred by this
+                        entity to be printed on an envelope).
+
+                        Note, that depending on the context inside which FlexibleAddress is being
+                        embedded, this field might feel redundant (as its value could be inferred from
+                        other properties of the parent element). Still, we believe that in some cases,
+                        both server and client developers might want to make use of it. See discussion
+                        here:
+
+                        https://github.com/erasmus-without-paper/ewp-specs-types-address/issues/3
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
