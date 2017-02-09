@@ -5,6 +5,13 @@ This document describes all the changes made to the *EWP Address Data Types*
 document, starting from its first released version.
 
 
+0.1.2
+-----
+
+* Added some additional explanation on `recipientName` (see [this thread]
+  (https://github.com/erasmus-without-paper/ewp-specs-types-address/issues/3)).
+
+
 0.1.1
 -----
 
