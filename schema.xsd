@@ -5,15 +5,13 @@
     xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
     elementFormDefault="qualified"
 
-    targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-types-address/tree/master"
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-types-address/tree/master"
+    targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-types-address/tree/stable-v1"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-types-address/tree/stable-v1"
 >
-    <!-- WRTODO: Replace all occurrences of 'master' (in all projects) with 'stable-v1' upon release. -->
-
     <xs:import
-        schemaLocation="../ewp-specs-architecture/common-types.xsd"
+        schemaLocation="https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd"
         namespace="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
-    /> <!-- WRTODO: absolute paths! -->
+    />
 
     <xs:annotation>
         <xs:documentation>
