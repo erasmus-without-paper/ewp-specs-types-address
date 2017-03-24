@@ -20,10 +20,10 @@ Address Types
 ### Compatibility and conversions
 
 As of 2016, there are no standard addressing schemes. They vary *widely* from
-country to country. Even the Universal Postal Union [says so]
-[addressing-the-world-paper]. Unfortunately, this means that developers in
-each of the partner countries will often have database structures not
-strictly compatible with one another, and this in turn MAY mean some
+country to country. Even the Universal Postal Union
+[says so][addressing-the-world-paper]. Unfortunately, this means that
+developers in each of the partner countries will often have database structures
+not strictly compatible with one another, and this in turn MAY mean some
 additional work to implement proper conversion, or change your data model.
 There's simply no other way.
 
@@ -120,8 +120,7 @@ Somewhat valid street address, but probably *not* a valid mailing address:
 Missing `<locality>` or `<country>` should be a very rare case, but it is not
 strictly forbidden. Many clients won't recognize it as a valid address, but if
 you cannot provide it in a more structured form, then it's still better than
-nothing (see [this issue]
-(https://github.com/erasmus-without-paper/ewp-specs-types-address/issues/2)):
+nothing (see [this issue](https://github.com/erasmus-without-paper/ewp-specs-types-address/issues/2)):
 
 ```xml
 <mailing-address>
@@ -132,8 +131,8 @@ nothing (see [this issue]
 An extremely limited address - with only a country (and possibly a city)
 present. Many clients won't recognize it as a valid address, but others might
 use even *that* limited information. It seems better to provide it this way,
-rather than providing nothing (e.g. see [this issue]
-(https://github.com/erasmus-without-paper/ewp-specs-api-ounits/issues/2#issuecomment-266775582)):
+rather than providing nothing (e.g. see
+[this issue](https://github.com/erasmus-without-paper/ewp-specs-api-ounits/issues/2#issuecomment-266775582)):
 
 ```xml
 <street-address>
