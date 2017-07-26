@@ -5,6 +5,12 @@ This document describes all the changes made to the *EWP Address Data Types*
 document, starting from its first released version.
 
 
+1.0.1
+-----
+
+* Fix Markdown links.
+
+
 1.0.0
 -----
 
