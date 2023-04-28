@@ -156,7 +156,7 @@
                             </xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="deliveryPointCode" minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="deliveryPointCode" minOccurs="0" maxOccurs="unbounded" type="xs:string">
                         <xs:annotation>
                             <xs:documentation>
                                 Identifies the Dock or the Mail Stop or Lane or any other specific Delivery
